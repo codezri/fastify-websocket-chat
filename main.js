@@ -8,7 +8,7 @@ fastify.register(require('fastify-static'), {
 
 fastify.addHook('preValidation', async (request, reply) => {
     if(request.routerPath == '/chat' && !request.query.username) {
-        reply.code(401).send('Connection rejected');
+        reply.code(403).send('Connection rejected');
     }
 })
 
