@@ -1,7 +1,7 @@
 const fastify = require('fastify')();
 const path = require('path')
 
-fastify.register(require('fastify-websocket'), {options: {clientTracking: true}});
+fastify.register(require('fastify-websocket'));
 fastify.register(require('fastify-static'), {
     root: path.join(__dirname, 'www')
 })
